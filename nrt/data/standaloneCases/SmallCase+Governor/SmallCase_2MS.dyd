@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+    Copyright (c) 2015-2019, RTE (http://www.rte-france.com)
+    See AUTHORS.txt
+    All rights reserved.
+    This Source Code Form is subject to the terms of the Mozilla Public
+    License, v. 2.0. If a copy of the MPL was not distributed with this
+    file, you can obtain one at http://mozilla.org/MPL/2.0/.
+    SPDX-License-Identifier: MPL-2.0
+
+    This file is part of Dynawo, an hybrid C++/Modelica open source time domain
+    simulation tool for power systems.
+-->
+<dyn:dynamicModelsArchitecture xmlns:dyn="http://www.rte-france.com/dynawo">
+  <!-- Network model -->
+  <dyn:modelicaModel id="Network">
+    <dyn:unitDynamicModel id="infRX" name="Dynawo.Electrical.Lines.Line" parFile="SmallCase.par" parId="2"/>
+    <dyn:unitDynamicModel id="line" name="Dynawo.Electrical.Lines.Line" parFile="SmallCase.par" parId="3"/>
+    <dyn:unitDynamicModel id="tfo" name="Dynawo.Electrical.Transformers.TransformerFixedRatio" parFile="SmallCase.par" parId="4"/>
+    <dyn:connect id1="infRX" var1="terminal2" id2="line" var2="terminal1"/>
+    <dyn:connect id1="line" var1="terminal2" id2="tfo" var2="terminal1"/>
+  </dyn:modelicaModel>
+  <!-- Load -->
+  <dyn:modelicaModel id="Load">
+    <dyn:unitDynamicModel id="load1" name="Dynawo.Electrical.Loads.LoadAlphaBeta" initName = "Dynawo.Electrical.Loads.Load_INIT" parFile="SmallCase.par" parId="5"/>
+    <dyn:unitDynamicModel id="load2" name="Dynawo.Electrical.Loads.LoadAlphaBeta" initName = "Dynawo.Electrical.Loads.Load_INIT" parFile="SmallCase.par" parId="6"/>
+  </dyn:modelicaModel>
+  <dyn:modelicaModel id="MS1">
+    <dyn:unitDynamicModel id="gen" name="Dynawo.Electrical.Machines.GeneratorSynchronous" initName = "Dynawo.Electrical.Machines.GeneratorSynchronousInt_INIT" parFile="SmallCase.par" parId="8" />
+    <dyn:unitDynamicModel id="Pm" name="Dynawo.Electrical.Controls.Basics.SetPoint" initName="Dynawo.Electrical.Controls.Basics.SetPoint_INIT" parFile="event.par" parId="1"/>
+    <dyn:unitDynamicModel id="efd" name="Dynawo.Electrical.Controls.Basics.SetPoint" initName="Dynawo.Electrical.Controls.Basics.SetPoint_INIT" parFile="event.par" parId="3"/>
+    <dyn:unitDynamicModel id="omegaRef" name="Dynawo.Electrical.Controls.Basics.SetPoint" parFile="event.par" parId="5"/>
+    <dyn:initConnect id1="gen" var1="Efd0Pu" id2="efd" var2="Value0"/>
+    <dyn:initConnect id1="gen" var1="Pm0Pu" id2="Pm" var2="Value0"/>
+    <dyn:connect id1="gen" var1="efdPu" id2="efd" var2="setPoint"/>
+    <dyn:connect id1="gen" var1="omegaRefPu" id2="omegaRef" var2="setPoint"/>
+    <dyn:connect id1="gen" var1="PmPu" id2="Pm" var2="setPoint"/>
+  </dyn:modelicaModel>
+  <dyn:modelicaModel id="MS2">
+    <dyn:unitDynamicModel id="gen" name="Dynawo.Electrical.Machines.GeneratorSynchronous" initName = "Dynawo.Electrical.Machines.GeneratorSynchronousInt_INIT" parFile="SmallCase.par" parId="10" />
+    <dyn:unitDynamicModel id="Pm" name="Dynawo.Electrical.Controls.Basics.SetPoint" initName="Dynawo.Electrical.Controls.Basics.SetPoint_INIT" parFile="event.par" parId="1"/>
+    <dyn:unitDynamicModel id="efd" name="Dynawo.Electrical.Controls.Basics.SetPoint" initName="Dynawo.Electrical.Controls.Basics.SetPoint_INIT" parFile="event.par" parId="3"/>
+    <dyn:unitDynamicModel id="omegaRef" name="Dynawo.Electrical.Controls.Basics.SetPoint" parFile="event.par" parId="5"/>
+    <dyn:initConnect id1="gen" var1="Efd0Pu" id2="efd" var2="Value0"/>
+    <dyn:initConnect id1="gen" var1="Pm0Pu" id2="Pm" var2="Value0"/>
+    <dyn:connect id1="gen" var1="efdPu" id2="efd" var2="setPoint"/>
+    <dyn:connect id1="gen" var1="omegaRefPu" id2="omegaRef" var2="setPoint"/>
+    <dyn:connect id1="gen" var1="PmPu" id2="Pm" var2="setPoint"/>
+  </dyn:modelicaModel>
+  <dyn:blackBoxModel id="Disconnect_Load2" lib="EVT_SET_POINT_BOOL.so" parFile="event.par" parId="8"/>
+  <!-- Connections -->
+  <dyn:connect id1="Network" var1="tfo_terminal2" id2="MS1" var2="gen_terminal"/>
+  <dyn:connect id1="Network" var1="infRX_terminal1" id2="MS2" var2="gen_terminal"/>
+  <dyn:connect id1="Network" var1="tfo_terminal2" id2="Load" var2="load1_terminal"/>
+  <dyn:connect id1="Network" var1="tfo_terminal2" id2="Load" var2="load2_terminal"/>
+  <dyn:connect id1="Disconnect_Load2" var1="EVT_state1" id2="Load" var2="load2_switchOffSignal1"/>
+</dyn:dynamicModelsArchitecture>
+
+

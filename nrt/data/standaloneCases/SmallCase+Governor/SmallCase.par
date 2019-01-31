@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+    Copyright (c) 2015-2019, RTE (http://www.rte-france.com)
+    See AUTHORS.txt
+    All rights reserved.
+    This Source Code Form is subject to the terms of the Mozilla Public
+    License, v. 2.0. If a copy of the MPL was not distributed with this
+    file, you can obtain one at http://mozilla.org/MPL/2.0/.
+    SPDX-License-Identifier: MPL-2.0
+
+    This file is part of Dynawo, an hybrid C++/Modelica open source time domain
+    simulation tool for power systems.
+-->
+<parametersSet xmlns="http://www.rte-france.com/dynawo">
+  <!-- InfiniteBus -->
+  <set id="1">
+    <par type="DOUBLE" name="U" value="1.1026316"/>
+    <par type="DOUBLE" name="UPhase" value="0.0"/>
+  </set>
+  <!-- infRX -->
+  <set id="2">
+    <par type="DOUBLE" name="RPu" value="0.00438"/>
+    <par type="DOUBLE" name="XPu" value="0.0438"/>
+    <par type="DOUBLE" name="BPu" value="0.0"/>
+    <par type="DOUBLE" name="GPu" value="0.0"/>
+  </set>
+  <!-- line -->
+  <set id="3">
+    <par type="DOUBLE" name="XPu" value="0.00692"/>
+    <par type="DOUBLE" name="RPu" value="6.0E-5"/>
+    <par type="DOUBLE" name="BPu" value="0"/>
+    <par type="DOUBLE" name="GPu" value="0"/>
+  </set>
+  <!-- tfo -->
+  <set id="4">
+    <par type="DOUBLE" name="XPu" value="0.038903"/>
+    <par type="DOUBLE" name="RPu" value="3.64E-4"/>
+    <par type="DOUBLE" name="BPu" value="0.0"/>
+    <par type="DOUBLE" name="GPu" value="0.0"/>
+    <par type="DOUBLE" name="rTfoPu" value="0.9069"/>
+  </set>
+  <!-- load1 -->
+  <set id="5">
+    <par type="DOUBLE" name="alpha" value="2"/>
+    <par type="DOUBLE" name="beta" value="2"/>
+    <par type="DOUBLE" name="P0Pu" value="1.9"/>
+    <par type="DOUBLE" name="Q0Pu" value="0"/>
+    <par type="DOUBLE" name="U0Pu" value="1"/>
+    <par type="DOUBLE" name="UPhase0" value="0"/>
+  </set>
+  <!-- load2 -->
+  <set id="6">
+    <par type="DOUBLE" name="alpha" value="2"/>
+    <par type="DOUBLE" name="beta" value="2"/>
+    <par type="DOUBLE" name="P0Pu" value="1.9"/>
+    <par type="DOUBLE" name="Q0Pu" value="0"/>
+    <par type="DOUBLE" name="U0Pu" value="1"/>
+    <par type="DOUBLE" name="UPhase0" value="0"/>
+  </set>
+  <!-- gen1 -->
+  <set id="8">
+    <par type="INT" name="ExcitationPu" value="1"/>
+    <par type="DOUBLE" name="DPu" value="0.0"/>
+    <par type="DOUBLE" name="H" value="4.0"/>
+    <par type="DOUBLE" name="RaPu" value="0.0"/>
+    <par type="DOUBLE" name="LdPu" value="0.15"/>
+    <par type="DOUBLE" name="MdPu" value="1.85"/>
+    <par type="DOUBLE" name="MrcPu" value="0"/>
+    <par type="DOUBLE" name="LDPu" value="0.19063"/>
+    <par type="DOUBLE" name="RDPu" value="0.02933"/>
+    <par type="DOUBLE" name="LfPu" value="0.23732"/>
+    <par type="DOUBLE" name="RfPu" value="0.00134"/>
+    <par type="DOUBLE" name="LqPu" value="0.15"/>
+    <par type="DOUBLE" name="MqPu" value="1.65"/>
+    <par type="DOUBLE" name="LQ1Pu" value="0.51659"/>
+    <par type="DOUBLE" name="RQ1Pu" value="0.00349"/>
+    <par type="DOUBLE" name="LQ2Pu" value="0.24243"/>
+    <par type="DOUBLE" name="RQ2Pu" value="0.02227"/>
+    <par type="DOUBLE" name="UNom" value="21"/>
+    <par type="DOUBLE" name="SNom" value="500"/>
+    <par type="DOUBLE" name="PNom" value="500"/>
+    <par type="DOUBLE" name="SnTfo" value="500"/>
+    <par type="DOUBLE" name="UNomHV" value="380"/>
+    <par type="DOUBLE" name="UNomLV" value="21"/>
+    <par type="DOUBLE" name="UBaseHV" value="380"/>
+    <par type="DOUBLE" name="UBaseLV" value="21"/>
+    <par type="DOUBLE" name="RTfPu" value="0"/>
+    <par type="DOUBLE" name="XTfPu" value="0"/>
+    <par type="DOUBLE" name="P0Pu" value="-3.80"/>
+    <par type="DOUBLE" name="Q0Pu" value="0"/>
+    <par type="DOUBLE" name="U0Pu" value="1"/>
+    <par type="DOUBLE" name="UPhase0" value="0"/>
+  </set>
+  <!-- gover -->
+  <set id="9">
+    <par type="DOUBLE" name="KGover" value="5"/>
+    <par type="DOUBLE" name="PMin" value="-1000"/>
+    <par type="DOUBLE" name="PMax" value="1000"/>
+    <par type="DOUBLE" name="PNom" value="1000"/>
+  </set>
+  <!-- gen2 -->
+  <set id="10">
+    <par type="INT" name="ExcitationPu" value="1"/>
+    <par type="DOUBLE" name="DPu" value="0.0"/>
+    <par type="DOUBLE" name="H" value="4.0"/>
+    <par type="DOUBLE" name="RaPu" value="0.0"/>
+    <par type="DOUBLE" name="LdPu" value="0.15"/>
+    <par type="DOUBLE" name="MdPu" value="1.85"/>
+    <par type="DOUBLE" name="MrcPu" value="0"/>
+    <par type="DOUBLE" name="LDPu" value="0.19063"/>
+    <par type="DOUBLE" name="RDPu" value="0.02933"/>
+    <par type="DOUBLE" name="LfPu" value="0.23732"/>
+    <par type="DOUBLE" name="RfPu" value="0.00134"/>
+    <par type="DOUBLE" name="LqPu" value="0.15"/>
+    <par type="DOUBLE" name="MqPu" value="1.65"/>
+    <par type="DOUBLE" name="LQ1Pu" value="0.51659"/>
+    <par type="DOUBLE" name="RQ1Pu" value="0.00349"/>
+    <par type="DOUBLE" name="LQ2Pu" value="0.24243"/>
+    <par type="DOUBLE" name="RQ2Pu" value="0.02227"/>
+    <par type="DOUBLE" name="UNom" value="21"/>
+    <par type="DOUBLE" name="SNom" value="500"/>
+    <par type="DOUBLE" name="PNom" value="500"/>
+    <par type="DOUBLE" name="SnTfo" value="500"/>
+    <par type="DOUBLE" name="UNomHV" value="380"/>
+    <par type="DOUBLE" name="UNomLV" value="380"/>
+    <par type="DOUBLE" name="UBaseHV" value="380"/>
+    <par type="DOUBLE" name="UBaseLV" value="380"/>
+    <par type="DOUBLE" name="RTfPu" value="0"/>
+    <par type="DOUBLE" name="XTfPu" value="0"/>
+    <par type="DOUBLE" name="P0Pu" value="0.0001"/>
+    <par type="DOUBLE" name="Q0Pu" value="0"/>
+    <par type="DOUBLE" name="U0Pu" value="1.1026316"/>
+    <par type="DOUBLE" name="UPhase0" value="0"/>
+  </set>
+  <set id="11">
+    <par type="INT" name="nbGen" value="2"/>
+    <par type="DOUBLE" name="weight_gen_0" value="4"/>
+    <par type="DOUBLE" name="weight_gen_1" value="4"/>
+  </set>
+</parametersSet>

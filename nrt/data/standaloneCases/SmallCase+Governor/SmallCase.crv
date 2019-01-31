@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+    Copyright (c) 2015-2019, RTE (http://www.rte-france.com)
+    See AUTHORS.txt
+    All rights reserved.
+    This Source Code Form is subject to the terms of the Mozilla Public
+    License, v. 2.0. If a copy of the MPL was not distributed with this
+    file, you can obtain one at http://mozilla.org/MPL/2.0/.
+    SPDX-License-Identifier: MPL-2.0
+
+    This file is part of Dynawo, an hybrid C++/Modelica open source time domain
+    simulation tool for power systems.
+-->
+<curvesInput xmlns="http://www.rte-france.com/dynawo">
+  <curve model="Load" variable="load2_running"/>
+  <curve model="Load" variable="load2_terminal_V_re"/>
+  <curve model="Load" variable="load2_terminal_V_im"/>
+  <curve model="Load" variable="load2_PPu"/>
+  <curve model="Load" variable="load1_PPu"/>
+  <curve model="MS1" variable="gover_PmPu"/>
+  <curve model="MS1" variable="gover_omegaPu"/>
+  <curve model="MS1" variable="gen_cePu"/>
+  <curve model="MS1" variable="gen_PePu"/>
+  <curve model="MS1" variable="gen_cmPu"/>
+  <curve model="MS1" variable="gen_PmPu"/>
+  <curve model="MS1" variable="gen_ufPu"/>
+  <curve model="MS1" variable="gen_efdPu"/>
+  <curve model="MS1" variable="gen_omegaPu"/>
+  <curve model="MS1" variable="gen_theta"/>
+  <curve model="MS1" variable="gen_PGenPu"/>
+  <curve model="MS1" variable="gen_QGenPu"/>
+  <curve model="MS1" variable="gen_PGen"/>
+  <curve model="MS1" variable="gen_QGen"/>
+  <curve model="MS1" variable="gen_UPu"/>
+  <curve model="MS1" variable="gen_IStatorPu"/>
+  <curve model="MS1" variable="gen_IRotorPu"/>
+  <curve model="MS1" variable="gen_UStatorPu"/>
+  <curve model="MS1" variable="gen_QStatorPu"/>
+  <curve model="MS1" variable="gen_thetaInternal"/>
+  <curve model="MS2" variable="gen_cePu"/>
+  <curve model="MS2" variable="gen_PePu"/>
+  <curve model="MS2" variable="gen_cmPu"/>
+  <curve model="MS2" variable="gen_PmPu"/>
+  <curve model="MS2" variable="gen_ufPu"/>
+  <curve model="MS2" variable="gen_efdPu"/>
+  <curve model="MS2" variable="gen_omegaPu"/>
+  <curve model="MS2" variable="gen_theta"/>
+  <curve model="MS2" variable="gen_PGenPu"/>
+  <curve model="MS2" variable="gen_QGenPu"/>
+  <curve model="MS2" variable="gen_PGen"/>
+  <curve model="MS2" variable="gen_QGen"/>
+  <curve model="MS2" variable="gen_UPu"/>
+  <curve model="MS2" variable="gen_IStatorPu"/>
+  <curve model="MS2" variable="gen_IRotorPu"/>
+  <curve model="MS2" variable="gen_UStatorPu"/>
+  <curve model="MS2" variable="gen_QStatorPu"/>
+  <curve model="MS2" variable="gen_thetaInternal"/>
+</curvesInput>
+

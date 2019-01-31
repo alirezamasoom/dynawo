@@ -20,3 +20,13 @@ case_description = "GoverProportional"
 job_file = os.path.join(os.path.dirname(__file__), "Governors/GoverProportional", "GoverProportional.jobs")
 
 test_cases.append((case_name, case_description, job_file, 32, standardReturnCodeType, standardReturnCode))
+
+##############################################
+#            Small Case + Governor           #
+##############################################
+
+case_name = "Small Case + Governor"
+case_description = "Check synchronous generator response to a load disconnection on a small network"
+job_file = os.path.join(os.path.dirname(__file__), "SmallCase+Governor", "SmallCase.jobs")
+
+test_cases.append((case_name, case_description, job_file, 60, standardReturnCodeType, standardReturnCode))
